@@ -12,15 +12,21 @@
 # réponse 2.1
 nombre = 42
 print(nombre)
+
 nombre_float = 1.61
 print(nombre_float)
+
 name = "Dokounin Vladyslav"
 print(name)
+
 is_morning = True
 print(is_morning)
+
 is_morning = False
 print(is_morning)
 
+null = None
+print(null)
 
 # code 2.1
 # la fonction `round()` permet d'arrondir un float en un integer
@@ -41,5 +47,20 @@ print(round(1 / 3, 4))
 # À chaque fois stockez le résultat dans une variable et affichez le résultat.
 
 # réponse 2.2
-a = 2
-print(round(2))
+nombre = 2
+nombre = float(nombre)
+print(nombre)
+
+nombre = 1.62
+nombre = int(nombre)
+print(nombre)
+
+nombre = 1.62
+nombre = round(nombre, 0)
+print(nombre)
+nombre = int(nombre)
+print(nombre)
+
+nombre = 1.62
+nombre = round(nombre, 1)
+print(nombre)
