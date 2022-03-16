@@ -106,3 +106,37 @@ print(my_var)
 my_var = []
 my_var = bool(my_var)
 print(my_var)
+
+# swap
+
+#  méthode a moi
+a = 42
+b = 123
+
+d = a
+a = (b - d) + d
+b = (b + d) - b
+
+
+if a == 123 and b == 42:
+    print("Vous avez reussi a interchanger les valeurs des variables")
+
+#  méthode arithméthique
+
+a = a + b
+b = a - b
+a = a - b
+
+# méthode python et JS mais pas en PHP
+
+a, b = b, a
+
+#arrondi
+import decimal
+from decimal import Decimal
+
+decimal.getcontext().rounding = decimal.ROUND_HALF_UP
+
+print(Decimal("0.5").quantize(Decimal("1")))
+
+print(Decimal("1.5").quantize(Decimal("1")))
