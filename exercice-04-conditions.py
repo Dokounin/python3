@@ -39,11 +39,11 @@ number = random.randint(0, 9)
 print(number)
 
 # réponse 4.2
-if number % 2:
-    print("le nombre est impair")
+if number % 2 == 0:
+    print("le nombre est pair")
 
 else:
-    print("le nombre est pair")
+    print("le nombre est impair")
 # exo 4.3
 # Écrivez un bloc if qui affiche
 # - "le nombre est divisible par 3" si la variable number est divisible par 3
@@ -54,11 +54,11 @@ number = random.randint(0, 9)
 print(number)
 
 # réponse 4.3
-if number % 3:
-    print("le nombre n'est pas divisible par 3")
+if number % 3 == 0:
+    print("le nombre est divisible par 3")
 
 else:
-    print("le nombre est divisible par 3")
+    print("le nombre n'est pas divisible par 3")
 # exo 4.4
 # écrivez un bloc if qui affiche
 # - "le nombre est supérieur ou égale à 5" si la variable number contient une valeur plus grande ou égale à 5
@@ -159,5 +159,5 @@ if mails == 0:
 elif mails == 1:
     print("il y un nouveau mail")
 
-elif mails >1:
+elif mails > 1:
     print(f"il y a {mails} nouveaux mails")
