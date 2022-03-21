@@ -38,7 +38,7 @@ print(result)
 # 1 | 0       1
 # 1 | 1       1
 
-# 0 & 0       0
+# 0 & 0       0random.randint(1000, 2000) / 100
 # 0 & 1       0
 # 1 & 0       0
 # 1 & 1       1
@@ -100,3 +100,16 @@ n = 1
 number += n
 
 # encadrement
+import random
+
+a = 42
+b = 123
+
+c = random.randint(1, 100)
+
+result = a < 90 < b
+print(result)
+
+result = a < c < b
+print(c)
+print(result)
