@@ -1,41 +1,26 @@
-class Voiture:
+from vehicule import Vehicule
+
+class Voiture(Vehicule):
     """
     Cette classe représente une voiture.
+    C'est une classe concrète qui étend (ou hérite de) la classe Vehicule.
+    Cette classe est destinée à être instanciée.
     """
-    def __init__(self, marque: str, modele: str, carburant: str, type_carrosserie: str, vitesse: int):
-        self._marque = marque
-        self._modele = modele
-        self._carburant = carburant
+
+    # les variables déclarées directement dans la classe sont "des variables de classe"
+    # le underscore permet d'indiquer que la variable est privée
+    # Attention car elle reste tout de même accessible depuis l'extérieur
+    # redéfinir une variable de classe dans une classe s'appelle "surcharger une variable de classe"
+    _acceleration = 20
+
+    # redéfinir une méthode (fonction) d'une classe mère dans une classe enfant s'appelle "surcharger une méthode"
+    def __init__(self, marque: str, modele: str, carburant: str, vitesse: int, type_carrosserie: str):
+        super().__init__(marque, modele, carburant, vitesse)
         self._type_carrosserie = type_carrosserie
-        # il faut utiliser le setter s'il y a une procédure de vérification des données avant l'affectation
-        self.set_vitesse(vitesse)
 
+    # redéfinir une méthode (fonction) d'une classe mère dans une classe enfant s'appelle "surcharger une méthode"
     def __str__(self):
-        return f"{self._marque} {self._modele} {self._carburant} {self._type_carrosserie} {self._vitesse}"
-
-    def get_marque(self) -> str:
-        return self._marque
-
-    def get_modele(self) -> str:
-        return self._modele
-
-    def get_carburant(self) -> str:
-        return self._carburant
+        return super().__str__() + f" {self._type_carrosserie}"
 
     def get_type_carrosserie(self) -> str:
         return self._type_carrosserie
-
-    # getter
-    def get_vitesse(self) -> int:
-        return self._vitesse
-
-    # setter
-    def set_vitesse(self, vitesse: int):
-        if type(vitesse) is not int:
-            raise Exception("La vitesse doit être un int")
-        elif vitesse > 220:
-            raise Exception("La vitesse max est de 220")
-        elif vitesse < -10:
-            raise Exception("La vitesse min est de -10")
-
-        self._vitesse = vitesse

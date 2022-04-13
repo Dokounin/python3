@@ -160,3 +160,4 @@ print(price_kilo_2)
 
 result = price_kilo_1 <= price_kilo_2
 print(result)
+
