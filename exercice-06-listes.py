@@ -111,15 +111,23 @@ for i in my_list:
 # exo 6.13
 # Multipliez chacun des nombres dans la liste par 100, réaffactez le résultat à la place de la valeur originelle puis affichez le résultat
 my_list = [2.71, 42, 123, 2, 3.14, 1.61]
-
+new_list = []
 # réponse 6.13
-
+for i in my_list:
+    i = i * 100
+    new_list.append(i)
+    print(i)
+print(new_list)
 # exo 6.14
 # Créez une deuxième liste ne contenant que les nombre entiers de la liste
 my_list = [2.71, 42, 123, 2, 3.14, 1.61]
+new_list = []
 
 # réponse 6.14
-
+for i in my_list:
+    if type(i) == int:
+        new_list.append(i)
+print(new_list)
 # exo 6.15
 # Ici le but est d'intervertir les éléments de la liste deux à deux
 # Liste initiale :
@@ -130,15 +138,27 @@ my_list = [2.71, 42, 123, 2, 3.14, 1.61]
 #
 #   my_list = [42, 2.71, 2, 123, 1.61, 3.14]
 my_list = [2.71, 42, 123, 2, 3.14, 1.61]
-
 # réponse 6.15
-
+for i in range(0, len(my_list), 2):
+    if i + 1 < len(my_list):
+        storage = my_list[i]
+        my_list[i] = my_list[i + 1]
+        my_list[i + 1] = storage
+print(my_list)
 # exo 6.16
 # Triez la liste en utilisant l'algorithme du tri bulle puis affichez la liste
 my_list = [2.71, 42, 123, 2, 3.14, 1.61]
 
 # réponse 6.16
+n = len(my_list)
 
+for i in range(n):
+    for j in range(0, n-i-1):
+
+        if my_list[j] > my_list[j+1] :
+
+            my_list[j], my_list[j+1] = my_list[j+1], my_list[j]
+print(my_list)
 # code 6.1
 # Lire la valeur de la ligne `m` et de la colonne `n` d'un tableau en 2 dimensions
 # print(matrix[m][n])
@@ -165,7 +185,7 @@ for _ in range(0, size):
 print(matrix)
 
 # réponse 6.17
-
+print(matrix[2][3])
 # code 6.2
 # Pour afficher toutes les combinaisons possibles de deux nombres de 0 à n inclus vous pouvez utiliser deux boucles `for` imbriquées
 #
@@ -178,4 +198,3 @@ for i in range(0, 3):
 # Avec le même tableau en 2 dimensions, affichez toutes les valeurs plus petites ou égales à 50 ainsi que leur cordoonnées (ligne et colonne)
 
 # réponse 6.18
-
