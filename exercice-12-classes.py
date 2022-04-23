@@ -211,6 +211,3 @@ for product in my_products:
 print(round(sum_price_sans_tax, 2))
 print(round(sum_tax, 2))
 print(round(sum_price_taxInclus, 2))
-    
-
-    
