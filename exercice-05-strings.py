@@ -88,4 +88,3 @@ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deseru
 # réponse 5.5
 lignes_texte = my_text.split('\n')
 print(len(lignes_texte))
-
