@@ -1,3 +1,4 @@
+
 # exercice-03-operateurs.py
 
 # exo 3.1
@@ -7,9 +8,6 @@
 # Stockez l'année en cours dans une variable nommée `year`.
 # Calculez l'âge d'Alice en utilisant les variables `birthyear` et `year` puis stockez le résultat dans une variable nommée `age` et affichez ce résultat.
 
-
-
-from unittest import result
 
 
 birthyear = 1988
@@ -98,11 +96,11 @@ miles = 3
 
 # réponse 3.6
 meters = miles * 1609.304
-print(meters)
+print(meters, "metres")
 
 km = meters / 1000
 km = round(km)
-print(km)
+print(km, "km")
 
 
 # exo 3.7
