@@ -122,21 +122,21 @@ print("10 miles =",miles_to_meters(10),"metres")
 # Référence : [Quels sont les taux de TVA en vigueur en France et dans l'Union européenne ? | economie.gouv.fr](https://www.economie.gouv.fr/cedef/taux-tva-france-et-union-europeenne)
 
 # réponse 10.7
-def compute_tax(tax_type:int):
+def compute_tax(price: float, tax_type:int):
     if tax_type == 1:
-        price = tax_type *(1 + (2.1 / 100))
-        print(price)
+        price = price *(1 + (2.1 / 100))
+        return price
     elif tax_type == 2:
-        price = tax_type *(1 + (5.5 / 100))
-        print(price)
+        price = price *(1 + (5.5 / 100))
+        return price
     elif tax_type == 3:
-        price = tax_type *(1 + (10 / 100))
-        print(price)
+        price = price *(1 + (10 / 100))
+        return price
     elif tax_type == 4:
-        price = tax_type *(1 + (20 / 100))
-        print(price)
+        price = price *(1 + (20 / 100))
+        return price
     else:
-        print(tax_type)
+        return price
         
-compute_tax(1)
+print(compute_tax(100,3))
 
