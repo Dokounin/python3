@@ -52,7 +52,7 @@ print(chocolates_par_person)
 # Affectez le résultat à une variable et affichez le résultat.
 
 # réponse 3.4
-result = (1 + 1 + 2 + 3 + 5 + 8 + 13) // 2
+result = (1 + 1 + 2 + 3 + 5 + 8 + 13) / 7
 print(result)
 # exo 3.5
 # Alice est en vacance et elle veut suivre ses dépenses quotidiennes.
@@ -80,7 +80,7 @@ print(days)
 total = day1 + day2 + day3 + day4 + day5
 print(total)
 
-average = total // days
+average = total / days
 print(average) 
 # exo 3.6
 # La formule suivante permet de convertir des miles en mètres :
