@@ -52,10 +52,9 @@ for i in range(0, 21):
 # réponse 7.6
 for i in range(0, 101):
     r = random.randint(1, 10)
-    if r == 1:
-      print("number 1:", r)
-    elif r == 10:
-        print("number 10:", r)
+    if r == 1 or r == 10:
+        print(f"number 10 ou 1: {r}")
+     
 # exo 7.7
 # en utilisant une boucle for, on tire 10 fois un nombre entier `r` au hasard entre 1 et 10 inclus
 # affichez `r` s'il est compris entre 3 et 8 inclus
@@ -111,10 +110,9 @@ print(count)
 count = 0
 for i in range(0, 67):
     r = random.randint(1,10)
-    if r <= 2:
+    if r <= 2 or r >= 9:
         count+=1
-    elif r >= 9:
-        count+=1
+       
 print(count)
 
 # exo 7.12
@@ -184,7 +182,7 @@ for i in range(1, 101):
 print("avant la boucle")
 while True:
     r = random.randint(0, 101)
-    if r == 7:
+    if r == 100:
         break
 print(r)
 print("fin de boucle")
