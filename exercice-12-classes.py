@@ -15,8 +15,8 @@ from xmlrpc.client import boolean
 
 
 class User :
-    def __init__(self, firstname: str, lastname: str, email: str, newsletter: bool) :
-        self.firstname = firstname
+    def __init__(self, firstname: str = '', lastname: str = '', email: str = '', newsletter: bool = False) :
+        self.firstname = firstname 
         self.lastname  =lastname
         self.email = email
         self.newsletter = newsletter
@@ -74,7 +74,6 @@ class ProductLorem:
     def __init__(self, name: str='', price: float = 0.0):
         self._name = name
         self._price = price
-        self.set_price(price)
 
     def __str__(self):
         return f"{self._name} {self._price}"
@@ -103,9 +102,23 @@ class ProductLorem:
 #   - price: 16,18
 
 # réponse 12.5
-product1 = ProductLorem("Foo", 31.41)
-product2 = ProductLorem("Bar", 27.18)
-product3 = ProductLorem("Baz", 16.18)
+product1 = ProductLorem()
+product1.set_name("Foo")
+product1.set_price(31.41)
+
+print("name : ", product1._name, "/ price : ", product1._price)
+
+product2 = ProductLorem()
+product2.set_name("Bar")
+product2.set_price(27.18)
+
+print("name : ", product2._name, "/ price : ", product2._price)
+
+product3 = ProductLorem()
+product3.set_name("Baz")
+product3.set_price(16.18)
+
+print("name : ", product3._name, "/ price : ", product3._price)
 # exo 12.6
 # Ajoutez chacune des instances de la classe `ProductLorem` à une liste nommée `products`
 # Utilisez une boucle `for` (type `foreach`) pour afficher le nom et le prix de chaque produit
