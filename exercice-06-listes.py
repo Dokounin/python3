@@ -32,7 +32,7 @@ print(my_list)
 my_list = ['foo', 'bar', 'baz', 'lorem', 'ipsum']
 
 # réponse 6.4
-del(my_list[1])
+del my_list[1]
 print(my_list)
 # exo 6.5
 # Remplacez l'élément qui se trouve en deuxièm position de la liste par un nombre entier et affichez le résultat
@@ -66,8 +66,8 @@ my_list = [2.71, 42]
 n = len(my_list)
 total = 0
 
-for somme in my_list:
-    total += somme
+for number in my_list:
+    total += number
 print(total)
 # exo 6.9
 # Calculez la somme des nombres de la liste et affichez le résultat
@@ -76,8 +76,8 @@ my_list = [2.71, 42, 123, 2, 3.14, 1.61]
 # réponse 6.9
 total = 0
 
-for somme in my_list:
-    total += somme
+for number in my_list:
+    total += number
 print(total)
 # exo 6.10
 # Calculez la moyenne des nombres de la liste et affichez le résultat
@@ -87,8 +87,8 @@ my_list = [2.71, 42, 123, 2, 3.14, 1.61]
 n = len(my_list)
 total = 0
 
-for somme in my_list:
-    total += somme
+for number in my_list:
+    total += number
 
 avarege = total / n
 print(avarege)
@@ -97,8 +97,11 @@ print(avarege)
 my_list = [2.71, 42, 123, 2, 3.14, 1.61]
 
 # réponse 6.11
-index = my_list.index(3.14)
-print(index)
+check = 3.14
+for i in range(len(my_list)):
+    if my_list[i] == check:
+        index = i
+        print("index de la valeur '3.14' es :", index)
 # exo 6.12
 # Comptez les nombres plus petits ou égaux à 10 dans la liste et affichez le résultat
 my_list = [2.71, 42, 123, 2, 3.14, 1.61]
@@ -111,13 +114,10 @@ for i in my_list:
 # exo 6.13
 # Multipliez chacun des nombres dans la liste par 100, réaffactez le résultat à la place de la valeur originelle puis affichez le résultat
 my_list = [2.71, 42, 123, 2, 3.14, 1.61]
-new_list = []
 # réponse 6.13
-for i in my_list:
-    i = i * 100
-    new_list.append(i)
-    print(i)
-print(new_list)
+for i in range(len(my_list)):
+   my_list[i] = my_list[i] * 100
+print(my_list)
 # exo 6.14
 # Créez une deuxième liste ne contenant que les nombre entiers de la liste
 my_list = [2.71, 42, 123, 2, 3.14, 1.61]
@@ -198,3 +198,8 @@ for i in range(0, 3):
 # Avec le même tableau en 2 dimensions, affichez toutes les valeurs plus petites ou égales à 50 ainsi que leur cordoonnées (ligne et colonne)
 
 # réponse 6.18
+print("Nombres du tableau inférieurs ou égaux à 50 :")
+for i in range(len(matrix)):
+    for j in range(len(matrix)):
+        if matrix[i][j] <= 50:
+            print(f"valeur : {matrix[i][j]} coordonnés: {i,j}")
